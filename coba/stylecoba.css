@@ -1,0 +1,292 @@
+/* Styling untuk body dan font default */
+body {
+    font-family: 'Arial Narrow Bold';
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @font-face {
+    font-family: 'stencilia';
+    src: url(font/Stencilia-A.ttf);
+  }
+
+  /* header */
+  header {
+    position: fixed;
+    padding: 5px 30px;
+    top :0;
+    width: 100%;
+    z-index: 3;
+    transition: 0.6s;
+  }
+
+  header.sticky {
+    padding: 5px 30px;
+    background: #fff;
+  }
+
+  header.sticky .logo,
+  header.sticky .menu-btn,
+  header.sticky ul li a {
+    color: #000;
+  }
+
+
+  header ul {
+  margin: 20px;
+  padding: 0px;
+  list-style: none;
+  overflow: hidden;
+  }
+
+  header li a {
+    color: #000;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+
+  header li a:hover,
+  header .menu-btn:hover {
+  color: #f4f4f4;
+  }
+
+  header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  }
+
+  /* menu */
+
+  header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  }
+
+  /* menu icon */
+
+  header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 40px 20px;
+  position: relative;
+  user-select: none;
+  }
+
+  header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+  }
+
+  header .menu-icon .navicon:before,
+  header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  }
+
+  header .menu-icon .navicon:before {
+  top: 5px;
+  }
+
+  header .menu-icon .navicon:after {
+  top: -5px;
+  }
+
+  /* menu btn */
+
+  header .menu-btn {
+  display: none;
+  }
+
+  header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+  }
+
+  header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+  }
+
+  header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+  }
+
+  header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+  }
+
+  header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+  }
+
+  /* Styling untuk background 1 */
+  .bg1 {
+    background-image: url('img/bgwe.png');
+    background-size: cover;
+    background-position: center center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Carousel */
+  .carousel {
+    height: 480px;
+    width: 480px;
+  }
+  
+  .carousel-inner > .carousel-item > img {
+    width: 480px;
+    height: 480px;
+  }
+  
+  /* Styling untuk konten di dalam background 1 */
+  .bg1 h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .bg1 p {
+    font-size: 2rem;
+    margin-bottom: 7rem;
+    font-family: 'stencilia';
+  }
+  
+  /* Styling untuk background 2 */
+  .bg2 {
+    background-image: url('img/bg.png');
+    background-size: cover;
+    background-position: center center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Styling untuk konten di dalam background 2 */
+  .bg2 h1 {
+    font-size: 3rem;
+    margin-top: 6.7rem;
+    margin-bottom: 6rem;
+  }
+  
+  .bg2 p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .bg2 h4 {
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-top: 5rem;
+  }
+
+  .bg2 .row {
+    margin-bottom: 5rem;
+  }
+  /* Styling untuk background 3 */
+  .bg3 {
+    background-image: url('img/bgwe.png');
+    background-size: cover;
+    background-position: center center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Styling untuk konten di dalam background 3 */
+  .bg3 h1 {
+    font-size: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bg3 p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .bg3 .col {
+    margin-left: -1.5rem;
+  }
+
+  /* Styling untuk konten di dalam footer */
+  footer {
+    margin-top: 10rem;
+  }
+
+  footer ul {
+    list-style-type: none;
+  }
+
+  footer a {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: black;
+  }
+
+  footer h1 {
+    margin-top: 5rem;
+    margin-left: 5rem;
+  }
+
+  footer img {
+    margin: -100px 0px;
+  }
+  /* Media query untuk responsif */
+  @media only screen and (max-width: 768px) {
+    .bg1, .bg2, .bg3 {
+      min-height: 300px;
+    }
+  
+    .bg1 h1, .bg2 h1, .bg3 h1 {
+      font-size: 2.5rem;
+    }
+
+    .bg2 h4 {
+      font-size: 1rem;
+    }
+
+    .bg1 p, .bg2 p, .bg3 p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 48em) {
+    header li {
+      float: left;
+    }
+    header li a {
+      padding: 20px 30px;
+    }
+    header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    header .menu-icon {
+      display: none;
+    }
+  }
